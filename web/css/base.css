@@ -1,0 +1,168 @@
+/* ============================================
+   base.css
+   리셋, 기본 ?�?�포, 공통 ?�이?�웃
+   ============================================ */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--nexon-bg-main);
+  color: var(--nexon-text-secondary);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ?�?�?� 공통 ?�스???�?�?� */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--nexon-text-primary);
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: var(--text-5xl); }
+h2 { font-size: var(--text-4xl); }
+h3 { font-size: var(--text-3xl); }
+h4 { font-size: var(--text-2xl); }
+h5 { font-size: var(--text-xl); }
+h6 { font-size: var(--text-lg); }
+
+p { color: var(--nexon-text-secondary); }
+
+a {
+  color: var(--nexon-text-cyan);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+a:hover { color: var(--nexon-text-primary); }
+
+code, pre {
+  font-family: var(--font-code);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ?�?�?� ?�크롤바 ?��????�?�?� */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--nexon-bg-surface); }
+::-webkit-scrollbar-thumb {
+  background: var(--nexon-border-light);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--nexon-cyan); }
+
+/* ?�?�?� 컨테?�너 ?�?�?� */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.container-narrow {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+/* ?�?�?� ?�션 공통 ?�?�?� */
+.section {
+  padding: var(--space-24) 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-16);
+}
+
+.section-label {
+  display: inline-block;
+  font-family: var(--font-code);
+  font-size: var(--text-sm);
+  color: var(--nexon-text-cyan);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-3);
+}
+
+.section-title {
+  font-size: var(--text-4xl);
+  font-weight: 800;
+  color: var(--nexon-text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.section-desc {
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--nexon-text-secondary);
+  font-size: var(--text-lg);
+}
+
+/* ?�?�?� 구분???�?�?� */
+.divider {
+  width: 60px;
+  height: 3px;
+  background: var(--grad-blue-lime);
+  margin: var(--space-4) auto;
+  border-radius: 2px;
+}
+
+/* ?�?�?� ?�선 컷아???�식???�?�?� */
+.cyber-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--nexon-cyan), var(--nexon-lime), transparent);
+  opacity: 0.35;
+}
+
+/* ?�?�?� ?�토리얼 ?�프???�비?�트 배경 (기존 거친 격자 ?�턴 ?�거) ?�?�?� */
+.nexon-grid-bg {
+  position: relative;
+  background-color: var(--nexon-bg-main);
+  background-image: radial-gradient(ellipse 60% 50% at 50% 30%, rgba(255,64,59,0.04), transparent 70%),
+    radial-gradient(ellipse 50% 40% at 85% 70%, rgba(255,64,59,0.03), transparent 60%);
+}
+
+/* ?�?�?� ?�틸리티 ?�?�?� */
+.text-cyan    { color: var(--nexon-text-cyan); }
+.text-blue    { color: var(--nexon-blue); }
+.text-lime    { color: var(--nexon-text-lime); }
+.text-accent  { color: var(--nexon-accent); }
+.text-green   { color: var(--nexon-text-lime); }
+.text-muted   { color: var(--nexon-text-muted); }
+.text-primary { color: var(--nexon-text-primary); }
+
+.font-code { font-family: var(--font-code); }
+
+.hidden { display: none !important; }
+
+/* ?�?�?� 반응???�?�?� */
+@media (max-width: 768px) {
+  h1 { font-size: var(--text-4xl); }
+  h2 { font-size: var(--text-3xl); }
+  h3 { font-size: var(--text-2xl); }
+  .section { padding: var(--space-16) 0; }
+  .container { padding: 0 var(--space-4); }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: var(--text-3xl); }
+  h2 { font-size: var(--text-2xl); }
+  .section-title { font-size: var(--text-2xl); }
+}
