@@ -547,10 +547,11 @@
 
 .job-req-list {
   list-style: none;
-  padding: var(--space-5);
+  margin: 0;
+  padding: 20px 24px;
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  gap: 16px;
 }
 
 .job-req-item {
